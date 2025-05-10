@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md. Nurnobi Islam - AI Engineer Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/babel-standalone@7.22.5/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'navy': '#1E3A8A',
+            'teal': '#2DD4BF',
+            'light-gray': '#F7FAFC',
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'profile': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+            'card': '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+          },
+          transitionProperty: {
+            'height': 'height',
+            'spacing': 'margin, padding',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body className="bg-light-gray">
+  <div id="root"></div>
+  <script type="text/babel">
+    const Header = () => (
+      <header className="bg-navy text-white text-center py-12">
+        <img
+          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80"
+          alt="Md. Nurnobi Islam"
+          className="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-profile transition-transform duration-300 hover:scale-105"
+        />
+        <h1 className="text-4xl font-bold font-inter">Md. Nurnobi Islam</h1>
+        <h2 className="text-2xl mt-2 font-inter text-teal">AI Engineer</h2>
+        <div className="mt-4 flex flex-wrap justify-center gap-4 font-inter">
+          <a href="mailto:nur35982@gmail.com" className="hover:text-teal transition-colors duration-200">nur35982@gmail.com</a>
+          <span>|</span>
+          <a href="tel:+8801704450886" className="hover:text-teal transition-colors duration-200">+8801704450886</a>
+          <span>|</span>
+          <a href="https://sites.google.com/view/m-nurnobi-islam/" target="_blank" className="hover:text-teal transition-colors duration-200">Portfolio</a>
+          <span>|</span>
+          <a href="https://www.linkedin.com/in/nurnobi-islam-nsu/" target="_blank" className="hover:text-teal transition-colors duration-200">LinkedIn</a>
+          <span>|</span>
+          <a href="https://github.com/Nur35982" target="_blank" className="hover:text-teal transition-colors duration-200">GitHub</a>
+          <span>|</span>
+          <a href="https://www.kaggle.com/nur35982" target="_blank" className="hover:text-teal transition-colors duration-200">Kaggle</a>
+        </div>
+        <p className="mt-2 font-inter">Address: Bashundhara RA, Dhaka, Bangladesh</p>
+      </header>
+    );
+
+    const Section = ({ title, children }) => (
+      <section className="py-8 px-4 md:px-16 bg-white rounded-lg shadow-card my-6 transition-all duration-300 hover:shadow-lg">
+        <h3 className="text-2xl font-semibold font-inter text-navy border-b-2 border-teal pb-2 mb-4">{title}</h3>
+        {children}
+      </section>
+    );
+
+    const ProfessionalSummary = () => (
+      <Section title="Professional Summary">
+        <p className="text-gray-700 font-inter">
+          AI Engineer with a BS in Computer Science & Engineering from North South University, specializing in Machine Learning, Deep Learning
+
+System: , Natural Language Processing (NLP), and Generative AI. Proficient in developing scalable AI solutions using LangChain, Retrieval-Augmented Generation (RAG), and Explainable AI techniques. Experienced in building production-ready web applications with Flask and Django REST API. Demonstrated expertise through impactful projects, including AI-powered chatbots and large language model evaluation, with a strong foundation in Python, TensorFlow, and PyTorch. Passionate about advancing AI research and contributing to innovative solutions.
+        </p>
+      </Section>
+    );
+
+    const Education = () => (
+      <Section title="Education">
+        <div className="space-y-6">
+          <div>
+            <h4 className="font-semibold font-inter text-navy">BS in Computer Science & Engineering</h4>
+            <p className="font-inter">North South University, Dhaka, Bangladesh (2020–2024)</p>
+            <p className="font-inter">CGPA: 2.62 (80% marks)</p>
+            <ul className="list-disc ml-6 mt-2 font-inter">
+              <li>Specialized in Machine Learning, NLP, and Generative AI, with coursework in Explainable AI and Reinforcement Learning with Human Feedback (RLHF).</li>
+              <li>Research: Plurality Evaluation of Large Language Models: A South Asian Perspective.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Higher Secondary Certificate (HSC), Science</h4>
+            <p className="font-inter">Bogura Government College, Bogura, Bangladesh (2018–2019)</p>
+            <p className="font-inter">GPA: 4.25</p>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Secondary School Certificate (SSC), Science</h4>
+            <p className="font-inter">Chalidatanga BBN High School, Kazipur, Sirajganj, Bangladesh (2016–2017)</p>
+            <p className="font-inter">GPA: 5.00</p>
+          </div>
+        </div>
+      </Section>
+    );
+
+    const ProfessionalExperience = () => (
+      <Section title="Professional Experience">
+        <div className="space-y-6">
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Python Programmer</h4>
+            <p className="font-inter">ATI Limited, Dhaka, Bangladesh (2025–Present)</p>
+            <ul className="list-disc ml-6 mt-2 font-inter">
+              <li>Assigned to Odoo development for business application solutions, enhancing operational efficiency.</li>
+              <li>Developed and maintained Django-based web applications, ensuring robust and scalable solutions.</li>
+              <li>Built and integrated REST APIs for seamless communication between systems.</li>
+              <li>Created, evaluated, and deployed machine learning models for real-world use cases, improving decision-making processes.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Campus Ambassador</h4>
+            <p className="font-inter">Machine Learning Olympiad, North South University, Dhaka, Bangladesh (2024)</p>
+            <ul className="list-disc ml-6 mt-2 font-inter">
+              <li>Spearheaded promotion of the ML Olympiad, increasing student participation by 30% through targeted campaigns.</li>
+              <li>Organized workshops on AI/ML, enhancing awareness of advanced topics like NLP and Generative AI.</li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+    );
+
+    const TechnicalSkills = () => (
+      <Section title="Technical Skills">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Languages</h4>
+            <p className="font-inter">Python, C++, C, SQL</p>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Frameworks & Libraries</h4>
+            <p className="font-inter">TensorFlow, PyTorch, LangChain, scikit-learn, Flask, Django, Django REST API</p>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">AI/ML Domains</h+++4>
+            <p className="font-inter">NLP, Generative AI, Retrieval-Augmented Generation (RAG), Explainable AI, RLHF, Computer Vision</p>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Tools</h4>
+            <p className="font-inter">Git, Figma, Jupyter Notebooks, Pinecone, Docker</p>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Databases</h4>
+            <p className="font-inter">PostgreSQL, MySQL, Vector Databases (Pinecone)</p>
+          </div>
+        </div>
+      </Section>
+    );
+
+    const Projects = () => (
+      <Section title="Selected Projects">
+        <div className="space-y-6">
+          <div>
+            <h4 className="font-semibold font-inter text-navy">MediBot: AI-Powered Medical Chatbot</h4>
+            <p className="font-inter">Personal Project, Online (2025)</p>
+            <ul className="list-disc ml-6 mt-2 font-inter">
+              <li>Engineered an AI-driven chatbot using Generative AI, RAG, and LangChain, integrated with OpenAI models and Pinecone for semantic search.</li>
+              <li>Achieved 90% response accuracy by optimizing data extraction and retrieval pipelines.</li>
+              <li>Deployed a scalable Flask-based API for real-time medical query handling.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Dataset Creation for Large Language Models Evaluation</h4>
+            <p className="font-inter">Senior Design Project, North South University, Dhaka, Bangladesh (2024)</p>
+            <ul className="list-disc ml-6 mt-2 font-inter">
+              <li>Developed a comprehensive dataset for evaluating LLMs, focusing on diversity and robustness metrics.</li>
+              <li>Implemented Explainable AI techniques to analyze model biases, improving evaluation transparency.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">UAV Localization Using RLHF</h4>
+            <p className="font-inter">Thesis Project, North South University, Dhaka, Bangladesh (2024)</p>
+            <ul className="list-disc ml-6 mt-2 font-inter">
+              <li>Designed an RLHF-based model for UAV localization, achieving 15% improvement in navigation accuracy.</li>
+              <li>Utilized PyTorch for model training and integrated human feedback loops for enhanced performance.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">CO₂ Emissions Prediction Challenge</h4>
+            <p className="font-inter">United International University, Dhaka, Bangladesh (2024)</p>
+            <ul className="list-disc ml-6 mt-2 font-inter">
+              <li>Ranked 22nd in ML Olympiad 2024, developing predictive models using ensemble techniques.</li>
+              <li>Applied feature engineering and hyperparameter tuning to improve model accuracy by 10%.</li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+    );
+
+    const Certifications = () => (
+      <Section title="Certifications">
+        <ul className="list-disc ml-6 font-inter">
+          <li>Prompt Engineering for Generative AI, DeepLearning.AI (2024)</li>
+          <li>Machine Learning Crash Course, Google Developer Community (2024)</li>
+        </ul>
+      </Section>
+    );
+
+    const Publications = () => (
+      <Section title="Publications">
+        <ul className="list-disc ml-6 font-inter">
+          <li><a href="https://www.thedailystar.net/opinion/readers-voice/news/bangladesh-missing-opportunity-3567781" target="_blank" className="text-teal hover:underline transition-colors duration-200">Is Bangladesh Missing an Opportunity?</a>, The Daily Star (2024)</li>
+          <li><a href="https://medium.com/@nur35982/after-the-july-24-uprising-is-bangladesh-ready-for-long-term-reforms-to-end-discrimination-and-7b3f4b8c2f8d" target="_blank" className="text-teal hover:underline transition-colors duration-200">After the July 24 Uprising: Is Bangladesh Ready for Long-Term Reforms to End Discrimination and Build a Strong Economy?</a>, Medium (2024)</li>
+        </ul>
+      </Section>
+    );
+
+    const Extracurricular = () => (
+      <Section title="Extracurricular Activities">
+        <div className="space-y-4">
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Theatre & Performance</h4>
+            <ul className="list-disc ml-6 mt-2 font-inter">
+              <li>Active theatre performer with 2.5 years in NSU Cine & Drama Club, participating in flash mobs and major productions including <i>Raktokorobi</i> by Rabindranath Tagore, <i>Othello</i> by William Shakespeare, and <i>Tartuffe</i> by Molière.</li>
+              <li>Organized and coordinated theatre productions, ensuring seamless execution and high audience engagement.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Leadership</h4>
+            <ul className="list-disc ml-6 mt-2 font-inter">
+              <li>In-charge of Media & Documentation, NSU Cine & Drama Club (2023–2024), leading content creation and documentation for major club events and productions.</li>
+              <li>General Member, NSU Computer Science & Engineering Club (2022–2024), contributing to AI/ML workshops and technical events.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold font-inter text-navy">Competitions</h4>
+            <ul className="list-disc ml-6 mt-2 font-inter">
+              <li>Semi-Finalist, Climate Science Olympiad (2023).</li>
+              <li>Participant, ICPC Asia Dhaka Site Preliminary Contest (2023, 2024).</li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+    );
+
+    const Footer = () => (
+      <footer className="bg-navy text-white text-center py-4 font-inter">
+        <p>© 2025 Md. Nurnobi Islam. All rights reserved.</p>
+      </footer>
+    );
+
+    const App = () => (
+      <div className="font-inter">
+        <Header />
+        <main className="max-w-5xl mx-auto">
+          <ProfessionalSummary />
+          <Education />
+          <ProfessionalExperience />
+          <TechnicalSkills />
+          <Projects />
+          <Certifications />
+          <Publications />
+          <Extracurricular />
+        </main>
+        <Footer />
+      </div>
+    );
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
